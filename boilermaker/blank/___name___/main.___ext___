@@ -1,0 +1,3 @@
+{%- if code_hello_world %}
+{{code_hello_world}}
+{%- endif %}

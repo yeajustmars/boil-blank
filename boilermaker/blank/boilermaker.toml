@@ -1,0 +1,27 @@
+[project]
+name = "{{name}}"
+version = "{{version|default:"0.1.0""
+description = "{{description}}."
+license = "{{license|default:"MIT"}}"
+authors = [{% for author in authors %} {{author}} {% endfor %}]
+website = "{{website|:default""}}"
+keywords = [{% for keyword in keywords %} "{{keyword}}" {% endfor %}]
+
+repository = "{{repo}}"
+{%- if default_branch %}
+default_branch = "{{default_branch}}"
+{%- endif %}
+{%- if default_subdir %}
+default_subdir = "{{default_subdir}}"
+{%- endif %}
+{%- if default_name %}
+default_name = "{{default_name}}"
+{%- endif %}
+{%- if %}
+default_lang = "{{default_lang}}"
+{%- endif %}
+
+[variables]
+{% for k,v in variables.items() %}
+{{k}} = {{v}}
+{% endfor %}

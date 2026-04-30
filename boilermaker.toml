@@ -1,0 +1,15 @@
+[project]
+name = "blank"
+version = "0.1.0"
+description = "Blank Boilermaker starter template"
+license = "MIT"
+authors = ["yeajustmars"]
+website = "https://github.com/yeajustmars/boil-blank"
+keywords = ["boilermaker", "official"]
+
+repository = "https://github.com/yeajustmars/boil-blank"
+default_branch = "main"
+default_name = "blank"
+default_lang = "boilermaker"
+
+[variables]
