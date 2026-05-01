@@ -11,7 +11,7 @@ repository = "{{repo}}"
 default_branch = "{{default_branch}}|default:'main'}}"
 {%- if default_subdir -%}
 default_subdir = "{{default_subdir}}"
-{%- endif -%}
+{% endif %}
 {%- if default_name -%}
 default_name = "{{default_name}}"
 {%- endif -%}
