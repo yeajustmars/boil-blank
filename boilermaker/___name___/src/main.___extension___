@@ -1,0 +1,13 @@
+{%- elif lang == 'clojure' -%}
+(defn -main [& _args]
+  (println "Hello {{name}}"))
+
+{%- elif lang == 'python' -%}
+if __name__ == "main":
+  print("Hello, {{name}}")
+
+{%- if lang == 'rust' -%}
+fn main() {
+    println!("Hello, {{name}}");
+}
+{%- endif -%}
