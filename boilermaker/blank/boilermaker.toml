@@ -9,16 +9,10 @@ keywords = []
 
 repository = "{{repo}}"
 default_branch = "{{default_branch}}|default:'main'}}"
-{%- if default_subdir -%}
-default_subdir = "{{default_subdir}}"
-{% endif %}
-{%- if default_name -%}
-default_name = "{{default_name}}"
-{%- endif -%}
-{%- if lang -%}
-default_lang = "{{lang}}"
-{%- elif default_lang -%}
-default_lang = "{{default_lang}}"
-{%- endif -%}
+{% if default_subdir %}default_subdir = "{{default_subdir}}"{% endif %}
+{% if default_name %}default_name = "{{default_name}}"{% endif %}
+{% if lang %}default_lang = "{{lang}}"{% elif default_lang %}default_lang = "{{default_lang}}"{% endif %}
 
 [variables]
+lang = "{{lang}}"
+extension = "{{extension}}"
