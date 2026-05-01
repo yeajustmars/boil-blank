@@ -15,4 +15,4 @@ default_subdir = "{{default_subdir}}"
 
 [variables]
 lang = "{{lang}}"
-extension = "{{extension}}"
+ext = "{{ext}}"
