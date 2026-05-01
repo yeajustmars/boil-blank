@@ -17,7 +17,7 @@ default_subdir = "{{default_subdir}}"
 {%- if default_name -%}
 default_name = "{{default_name}}"
 {%- endif -%}
-{%- if -%}
+{%- if default_lang -%}
 default_lang = "{{default_lang}}"
 {%- endif -%}
 
