@@ -22,6 +22,6 @@ default_lang = "{{default_lang}}"
 {%- endif -%}
 
 [variables]
-{%- for k,v in variables.items() -%}
+{%- for k,v in variables|items -%}
 {{k}} = "{{v}}"
 {%- endfor -%}
