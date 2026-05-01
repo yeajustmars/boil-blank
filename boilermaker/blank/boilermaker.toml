@@ -1,10 +1,10 @@
 [project]
 name = "{{name}}"
-version = "{{version"
+version = "{{version}}"
 description = "{{description}}"
 license = "{{license}}"
 authors = [{% for author in authors %} {{author}} {% endfor %}]
-website = "{{website"
+website = "{{website}}"
 keywords = [{%- for keyword in keywords -%}"{{keyword}}"{%- if not loop.last -%}, {%- endif -%}{%- endfor -%}]
 
 repository = "{{repo}}"
@@ -23,5 +23,5 @@ default_lang = "{{default_lang}}"
 
 [variables]
 {%- for k,v in variables.items() -%}
-{{k}} = {{v}}
+{{k}} = "{{v}}"
 {%- endfor -%}
