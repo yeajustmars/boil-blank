@@ -2,6 +2,9 @@
 (defn -main [& _args]
   (println "Hello {{name}}"))
 
+{%- elif lang == 'javascript' -%}
+console.log("Hello, World!");
+
 {%- elif lang == 'python' -%}
 if __name__ == "main":
   print("Hello, {{name}}")
