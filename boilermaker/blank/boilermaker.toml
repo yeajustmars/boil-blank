@@ -10,7 +10,7 @@ keywords = []
 repository = "{{repo}}"
 default_name = "{{name}}"
 default_lang = "{{lang}}"
-default_branch = "{{default_branch|default:'main'}}"
+default_branch = "main"
 default_subdir = "{{default_subdir}}"
 
 [variables]
