@@ -1,11 +1,11 @@
 [project]
 name = "{{name}}"
-version = "{{version|default:'0.1.0'}}"
+version = "0.1.0"
 description = "{{description}}"
 license = "{{license}}"
-authors = [{% for author in authors %} "{{author}}"{%- if not loop.last -%}, {%- endif -%} {% endfor %}]
+authors = []
 website = "{{website}}"
-keywords = [{%- for keyword in keywords -%}"{{keyword}}"{%- if not loop.last -%}, {%- endif -%}{%- endfor -%}]
+keywords = []
 
 repository = "{{repo}}"
 default_branch = "{{default_branch}}|default:'main'}}"
