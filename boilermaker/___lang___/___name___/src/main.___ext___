@@ -3,7 +3,7 @@
   (println "Hello {{name}}"))
 
 {%- elif lang == 'javascript' -%}
-console.log("Hello, World!");
+console.log("Hello, {{name}}");
 
 {%- elif lang == 'python' -%}
 if __name__ == "main":
