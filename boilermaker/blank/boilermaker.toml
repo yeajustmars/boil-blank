@@ -1,27 +1,24 @@
 [project]
 name = "{{name}}"
-version = "{{version}}"
+version = "{{version|default:'0.1.0'}}"
 description = "{{description}}"
 license = "{{license}}"
-authors = [{% for author in authors %} {{author}} {% endfor %}]
+authors = [{% for author in authors %} "{{author}}"{%- if not loop.last -%}, {%- endif -%} {% endfor %}]
 website = "{{website}}"
 keywords = [{%- for keyword in keywords -%}"{{keyword}}"{%- if not loop.last -%}, {%- endif -%}{%- endfor -%}]
 
 repository = "{{repo}}"
-{%- if default_branch -%}
-default_branch = "{{default_branch}}"
-{%- endif -%}
-{%- if default_subdir -%}
+default_branch = "{{default_branch}}|default:'main'}}"
+{% if default_subdir %}
 default_subdir = "{{default_subdir}}"
-{%- endif -%}
-{%- if default_name -%}
+{% endif %}
+{% if default_name %}
 default_name = "{{default_name}}"
-{%- endif -%}
-{%- if default_lang -%}
+{% endif %}
+{% if lang %}
+default_lang = "{{lang}}"
+{% elif default_lang %}
 default_lang = "{{default_lang}}"
-{%- endif -%}
+{% endif %}
 
 [variables]
-{%- for k,v in variables -%}
-{{k}} = "{{v}}"
-{%- endfor -%}
